@@ -1,129 +1,104 @@
-.container {
-  padding: 0 2rem;
+.title{
+  font-size:  28px;
+  font-weight: 600;
+  letter-spacing: 0px;
+  color: #000000;
 }
-
-.main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
+.text{
+  font-size:  13px;
+  letter-spacing: 0px;
+  color: #000000;
+  margin-bottom: 2rem;
+}
+.invalid-feedback{
+  font-size: 13px;
+}
+.form-control{
+  border-radius: 60px;
+  height: 45px;
+  font-size:  14px;
+}
+.form-control::-webkit-input-placeholder {
+  color: #9CA9B5;
+  font-size:  14px;
+}
+.form-label{
+  font-size: 14px;
+  font-weight: 600;
+}
+.LoginAppContainer{
+  max-width: 1950px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  height: 100vh;
+  max-height: 1000px;
+}
+.LoginImageContainer{
+  padding: 20px 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  margin: auto 0;
+  background-image: linear-gradient(90deg, rgba(190,39,192,0.5413515748096114) 0%, rgba(76,9,121,0.8018557764902836) 100%), url('../components/assets/login-background.png');
+  border: 1px solid #707070;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
 }
-
-.footer {
+.LoginImageContainer img{
+  justify-self: flex-start;
+}
+.LoginContainer{
+  padding: 20px;
   display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  margin: auto 0;
+  height: 100%;
 }
-
-.footer a {
+.LoginContainer .HeaderLogin{
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-grow: 1;
+  justify-content: flex-end;
 }
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.LoginContainer .Middle{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 480px;
 }
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+.LoginContainer .Middle form{
+  display: flex;
+  flex-direction: column;
 }
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
+.forgetPassword{
+  color: #2294E3;
+  cursor: pointer;
 }
-
-.title,
-.description {
+.buttonForm{
+  width: 200px;
+  align-self: center;
+}
+.error{
+  color: #dc3545;
+  margin-bottom: 1.5rem;
   text-align: center;
 }
-
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
+.displayNo{
+  display: none;
 }
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-}
-
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
-}
-
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
-
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
-
-@media (max-width: 600px) {
-  .grid {
+@media screen and (max-width: 700px) {
+  .LoginAppContainer {
+    display: flex;
+  }
+  .LoginImageContainer{
+    display: none;
+  }
+  .LoginContainer{
     width: 100%;
-    flex-direction: column;
   }
-}
-
-@media (prefers-color-scheme: dark) {
-  .card,
-  .footer {
-    border-color: #222;
-  }
-  .code {
-    background: #111;
-  }
-  .logo img {
-    filter: invert(1);
+  .LoginContainer .Middle{
+    width: 100%;
   }
 }
