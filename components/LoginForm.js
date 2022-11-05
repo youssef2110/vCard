@@ -72,7 +72,7 @@ export default function LoginForm({changeVisibility}) {
                         </Form.Group>
                         { error && <SignInError styles={styles} error={error} /> }
                         <p className={styles.forgetPassword} onClick={changeVisibility}>
-                            Don't have an account ? Sign Up
+                            {"Don't have an account ? Sign Up"}
                         </p> 
                         <Button className={styles.buttonForm} variant="primary" type="submit">
                             Se connecter
